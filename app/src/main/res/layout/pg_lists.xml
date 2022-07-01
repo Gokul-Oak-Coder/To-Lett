@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_background"
+   >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        android:elevation="3dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/pg_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/pg_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pg_title"
+                android:text="title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/pg_image"
+                android:layout_toEndOf="@id/pg_image"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/pg_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pg_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@id/pg_image"
+                android:layout_toRightOf="@id/pg_image"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/pg_rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_below="@+id/pg_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:rating="4.5"
+                android:secondaryProgressTint="@color/yellow"
+                android:layout_toEndOf="@id/pg_image"
+                android:layout_toRightOf="@id/pg_image"
+                android:numStars="5"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
